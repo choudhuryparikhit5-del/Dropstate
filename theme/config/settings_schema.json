@@ -1,0 +1,66 @@
+[
+  {
+    "name": "theme_info",
+    "theme": {
+      "name": "DropState",
+      "id": 123456789
+    }
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Color",
+        "default": "#0a0a0a"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent Color",
+        "default": "#d9662c"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background Color",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Heading Font",
+        "default": "bebas_neue_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Body Font",
+        "default": "inter_n4"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "instagram_handle",
+        "label": "Instagram Handle",
+        "default": "@dropstate"
+      },
+      {
+        "type": "text",
+        "id": "tiktok_handle",
+        "label": "TikTok Handle",
+        "default": "@dropstate"
+      }
+    ]
+  }
+]
