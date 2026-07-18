@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}{% if page_title != blank %} | {% endif %}{{ shop.name }}</title>
+    <meta name="description" content="{{ page_description | escape }}">
+    
+    {%- if canonical_url != blank -%}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    
+    <style>
+      :root {
+        --black: #0a0a0a;
+        --white: #ffffff;
+        --off-white: #f5f3ef;
+        --gray: #8b8b87;
+        --line: #e4e1da;
+        --line-dark: #2a2a2a;
+        --orange: #d9662c;
+        --orange-deep: #b8501e;
+        --ease: cubic-bezier(.16,1,.3,1);
+      }
+    </style>
+  </head>
+
+  <body class="template-{{ template }}">
+    {%- render 'ticker' -%}
+    {%- render 'header' -%}
+    {%- render 'mobile-menu' -%}
+
+    <main id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    {%- render 'footer' -%}
+    {%- render 'cart-drawer' -%}
+
+    {{ 'script.js' | asset_url | script_tag }}
+  </body>
+</html>
