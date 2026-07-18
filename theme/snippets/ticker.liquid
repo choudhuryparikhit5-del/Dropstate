@@ -1,0 +1,57 @@
+<div class="ticker">
+  <div class="ticker-track">
+    <span>PRE-ORDER ₹999 / MRP ₹1,299</span>
+    <span>240 GSM FRENCH TERRY COTTON</span>
+    <span>FREE SHIPPING OVER ₹2,999</span>
+    <span>OVERSIZED FIT / MADE IN INDIA</span>
+    <span>PRE-ORDER ₹999 / MRP ₹1,299</span>
+    <span>240 GSM FRENCH TERRY COTTON</span>
+    <span>FREE SHIPPING OVER ₹2,999</span>
+    <span>OVERSIZED FIT / MADE IN INDIA</span>
+  </div>
+</div>
+
+<style>
+  .ticker {
+    background: var(--black);
+    color: var(--off-white);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    padding: 9px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 60;
+  }
+
+  .ticker-track {
+    display: inline-flex;
+    animation: ticker 32s linear infinite;
+  }
+
+  .ticker-track span {
+    padding: 0 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ticker-track span::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: var(--orange);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
